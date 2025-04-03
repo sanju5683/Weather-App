@@ -598,6 +598,33 @@ footer {
   .day .img div {
     display: none;
   }
+  #city_name {
+    font-size: 1.5rem;
+  }
+  #temp :first-child {
+    font-size: 3rem;
+}
+
+#temp :nth-child(2) {
+  font-size: 30px;
+  height: 60px;
+  display: inline-block;
+  margin: auto;
+}
+#temp :nth-child(3) {
+  font-size: 50px;
+  /* height: 88px; */
+  /* display: inline-block; */
+  margin: 0;
+
+}
+#temp {
+align-items: center;
+}
+
+.weather-info i {
+    font-size: 3rem;
+}
 }
 
 @media (max-width: 425px) {
@@ -611,6 +638,7 @@ footer {
   .forecast-info {
     width: 95vw;
   }
+
 }
 @media (max-width: 1024px) {
   .details .cards {
