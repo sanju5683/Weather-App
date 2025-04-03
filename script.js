@@ -57,16 +57,16 @@ const getWeather = async (city) => {
 
 
   try {
-    // _______________updating thr weather info_______________
+    // _______________updating weather info_______________
 
-    city_name.innerText = result.location.name + " , " + result.location.region;
+    city_name.innerText = result.location.name + " , " + result.location.region + " , " + result.location.country;
     document.getElementById("temp").firstElementChild.innerText = result.current.temp_c;
     curr_condition.innerText = result.current.condition.text;
     feels.firstElementChild.innerText = result.current.feelslike_c;
     barometer.firstElementChild.innerText = result.current.pressure_mb;
     dew.firstElementChild.innerText = result.current.dewpoint_c;
     visible.firstElementChild.innerText = result.current.vis_km;
-    cloud.firstElementChild.innerText = result.current.cloud;
+    cloud.firstElementChild.innerText = result.current.cloud +"%";
     update_time.firstElementChild.innerText = result.location.localtime.split(" ")[1];
 
 
@@ -281,7 +281,7 @@ function success(position) {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
   getWeather(lat, lon);
-  console.log(lat, lon);
+  // console.log(lat, lon);
   
 }
 
