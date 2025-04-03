@@ -44,7 +44,7 @@ const getWeather = async (city) => {
 
   let key = "d33f2dc5abfa461499025152250703"
 
-  let url = `http://api.weatherapi.com/v1/forecast.json?key=${key}&q=${city}&days=3`
+  let url = `https://api.weatherapi.com/v1/forecast.json?key=${key}&q=${city}&days=3`
   const response = await fetch(url);
   const result = await response.json();
 
