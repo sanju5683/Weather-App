@@ -160,10 +160,10 @@ button {
   min-width: 90px;
   display: flex;
   flex-direction: column;
-  height: 165px;
   justify-content: space-around;
   font-size: 18px;
   user-select: none;
+  gap: 4px;
 }
 .daily-info .card {
   background-color: rgb(5, 23, 61);
@@ -209,11 +209,11 @@ button {
   align-items: center;
   justify-content: start;
   gap: 10px;
-  div{
-  width: 155px
+  div {
+    width: 155px;
   }
 }
-.day i{
+.day i {
   color: yellow;
 }
 
@@ -595,9 +595,9 @@ footer {
   .max_temp {
     font-size: 19px;
   }
-  .day .img div{
+  .day .img div {
     display: none;
-}
+  }
 }
 
 @media (max-width: 425px) {
@@ -611,9 +611,6 @@ footer {
   .forecast-info {
     width: 95vw;
   }
-
-  
-
 }
 @media (max-width: 1024px) {
   .details .cards {
