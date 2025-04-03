@@ -40,6 +40,9 @@ function getWeatherIconDay(condition) {
 
 
 
+
+
+
 const getWeather = async (city) => {
 
   let key = "d33f2dc5abfa461499025152250703"
@@ -273,7 +276,22 @@ const getWeather = async (city) => {
   }
 }
 
-getWeather("kOLkata")
+
+function success(position) {
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  getWeather(lat, lon);
+  console.log(lat, lon);
+  
+}
+
+window.navigator.geolocation.getCurrentPosition(success,error);
+
+
+function error() {
+  console.log("Unable to retrieve location");
+}
+// getWeather("kOLkata")
 
 
 
@@ -296,6 +314,10 @@ input.addEventListener("keyup", (e) => {
   }
 }
 )
+
+
+
+
 
 
 
