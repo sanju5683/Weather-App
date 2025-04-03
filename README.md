@@ -1,8 +1,13 @@
-# Weather App
+# 🌦 Weather App
 
 A simple weather application that provides current weather conditions, hourly forecasts, and detailed day information for a selected city.
 
-## Features
+
+## 🚀 Live Preview
+
+You can view the live version of the project [here](http://127.0.0.1:5500/index.html)
+
+## 🌟 Features
 
 - **Search by City**: Enter a city name to get weather details.
 - **Current Weather**: Displays temperature, condition, feels like, barometer, dew point, visibility, and cloud coverage.
@@ -11,14 +16,15 @@ A simple weather application that provides current weather conditions, hourly fo
 - **Day Details**: Includes sunrise, sunset, moonrise, moonset, and moon phase information.
 - **Additional Info**: Displays wind direction and speed, UV index, humidity, and precipitation percentage.
 
-## Technologies Used
+
+## 🛠 Technologies Used
 
 - **HTML**: Structure of the application.
 - **CSS**: Styling using custom styles and Weather Icons.
 - **JavaScript**: Dynamic updates and interactions.
 - **WeatherAPI**: Fetches real-time weather data.
 
-## Project Structure
+## 📂 Project Structure
 
 ```
 Weather App/
@@ -37,7 +43,7 @@ Weather App/
 ├── weather-icons-master/ # Weather Icons library
 ```
 
-## How to Use
+## 📌 How to Use
 
 1. Clone the repository or download the project files.
 2. Open `index.html` in your browser.
@@ -45,15 +51,13 @@ Weather App/
 4. View the weather details and forecasts.
 
 
-## Live Preview
 
-You can view the live version of the project [here](http://127.0.0.1:5500/index.html)
 
-## Credits
+## 🎖 Credits
 
 - **WeatherAPI**: [WeatherAPI.com](https://www.weatherapi.com/) for providing weather data.
 - **Weather Icons**: [Weather Icons](https://erikflowers.github.io/weather-icons/) for the weather-related icons.
 
-## License
+## 📜 License
 
 This project is for educational purposes and is not intended for commercial use.
