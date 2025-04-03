@@ -1,0 +1,5 @@
+# Ignore the weather-icons-master folder
+weather-icons-master/
+
+# Ignore result.json
+result.json

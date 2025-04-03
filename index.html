@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Weather APP</title>
+
+    <link
+      rel="shortcut icon"
+      href="/images/clouds-and-sun.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/weather-icons.css" />
+    <link rel="stylesheet" href="./css/weather-icons.min.css" />
+    <link rel="stylesheet" href="./css/weather-icons-wind.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">My Weather <img width="25" src="./images/clouds-and-sun.png" alt=""></div>
+      <div id="search_area">
+        <input id="city-input" type="text" placeholder="Search" />
+        <button id="search"><img src="./images/search.svg" alt="" /></button>
+      </div>
+    </nav>
+
+    <main>
+      <div class="weather-info">
+        <div>
+          <div id="city_name">Kolkata, WB</div>
+          <div class="temp-icon">
+            <i class="wi wi-night-clear"></i>
+            <div id="temp">
+              <span>24</span>
+              <!-- <i class="wi wi-celsius"></i> -->
+              <span>&deg</span><span>C</span>
+            </div>
+          </div>
+          <div id="curr_condition">Clear</div>
+          <div id="other">
+            <span id="feels"> Feels Like &nbsp;<span>23 </span>&deg</span>
+            <span id="barometer">Barometer &nbsp; <span>1007</span>mb</span>
+            <span id="dew"> Dew Point &nbsp; <span>20 </span>&deg </span>
+            <span id="visible">Visibility &nbsp; <span>20 </span>km</span>
+            <span id="cloud">Cloud &nbsp; <span>0</span></span>
+          </div>
+          <div id="update_time">Updated as of <span>9:17 PM</span></div>
+        </div>
+      </div>
+
+      <div class="daily-info">
+        <div>Hourly Forecast</div>
+        <div class="hourly-info cards">
+          <div class="card">
+            <div>Now</div>
+            <div class="img">
+              <i class="wi wi-day-sunny"></i>
+            </div>
+            <div>
+              <span class="max_temp">20 &degC</span>
+            </div>
+            <div class="condition">Sunny</div>
+            <div class="precipitation">
+              <img width="20px" src="./images/shower.png" alt="" /><span
+                >0%</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+<div class="forecast-info">
+  <div class="forecast-heading">3-Day Forecast</div>
+      <div class="forecast">
+        <div class="day">
+          <div>Today</div>
+          <div class="img">
+            <i class="wi wi-day-sunny"></i>
+            <div>Mostly Sunny</div>
+          </div>
+          <div>
+            <span class="max_temp">32 &deg</span>
+            
+            <span class="min_temp">20 &deg</span>
+          </div>
+          <div class="rain">
+            <img width="20px" src="./images/shower.png" alt="" />
+            <span>1%</span>
+          </div>
+        </div>
+        <div class="day">
+          <div>Today</div>
+          <div class="img">
+            <i class="wi wi-day-sunny"></i>
+            <div>Mostly Sunny</div>
+          </div>
+          <div>
+            <span class="max_temp">32 &deg</span>
+            <span class="min_temp">20 &deg</span>
+          </div>
+          <div class="rain">
+            <img width="20px" src="./images/shower.png" alt="" />
+            <span>1%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="details">
+        <div>Day Details</div>
+        <div class="cards">
+          <div class="card sun">
+            <div class="rise">
+              <div class="heading">Sunrise</div>
+              <div class="rise_set-icon sun_rise">
+                <i class="wi wi-sunrise"></i><span> 5:53 AM</span>
+              </div>
+            </div>
+
+            <div class="set">
+              <div class="heading">Sunset</div>
+              <div class="rise_set-icon sun_set">
+                <i class="wi wi-sunset"></i><span> 5:42 PM</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="moon card">
+            <div>
+              <div class="rise">
+                <div class="heading">Moonrise</div>
+                <div class="rise_set-icon moon_rise">
+                  <span><i class="wi wi-moonrise"></i> </span><span>5:42</span>
+                </div>
+              </div>
+
+              <div class="set">
+                <div class="heading">Moonset</div>
+                <div class="rise_set-icon moon_set">
+                  <span><i class="wi wi-moonset"></i></span> <span>5:42</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="moon-phase">
+              <p class="heading">Moon Phase</p>
+
+              <div class="moon-img">
+                <i id="moon_phase_img" class="wi wi-moon-waxing-gibbous-6"></i>
+                <p id="moon_phase">Waxing Gibbous</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="other-info">
+        <div class="circle wind">
+          <p class="heading">Wind</p>
+
+          <div class="compass">
+            <div class="direction">
+              <p id="wind">
+                <span>NE</span>
+                <span>10 mph</span>
+              </p>
+            </div>
+            <div class="arrow ne"></div>
+          </div>
+        </div>
+
+        <div class="uv">
+          <p class="heading">UV Index</p>
+          <div
+            id="uv"
+            role="progressbar"
+            aria-valuenow="64"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            style="--value: 7"
+          >
+            <span>7</span>
+            <span>Medium</span>
+          </div>
+          <!-- <div>0</div> -->
+        </div>
+
+        <div class="circle humidity">
+          <p class="heading">Humidity</p>
+          <div
+            id="humidity"
+            role="progressbar"
+            aria-valuenow="64"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            style="--value: 64"
+          >
+            <div>10 %</div>
+          </div>
+        </div>
+
+        <div class="precip">
+          <div class="heading">Precipitation</div>
+
+          <div
+            id="precip"
+            role="progressbar"
+            aria-valuenow="64"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            style="--value: 64"
+          >
+            <div>10 %</div>
+          </div>
+
+          <div></div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div style="font-size: 12px">
+        Powered by
+        <a href="https://www.weatherapi.com/" title="Weather API"
+          >WeatherAPI.com</a
+        >
+      </div>
+      <div>
+        <a href="https://www.weatherapi.com/" title="Free Weather API"
+          ><img
+            width="100"
+            src="//cdn.weatherapi.com/v4/images/weatherapi_logo.png"
+            alt="Weather data by WeatherAPI.com"
+            border="0"
+        /></a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
