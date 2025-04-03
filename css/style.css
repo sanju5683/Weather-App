@@ -188,6 +188,7 @@ button {
   padding: 25px;
   background-color: rgb(3 22 60 / 59%);
   margin-top: 15px;
+  min-height: 100px;
 }
 .forecast .day {
   cursor: pointer;
@@ -211,7 +212,9 @@ button {
   width: 155px
   }
 }
-
+.day i{
+  color: yellow;
+}
 
 .day > :first-child {
   /* margin-right: 50px; */
