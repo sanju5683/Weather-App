@@ -5,7 +5,7 @@ A simple weather application that provides current weather conditions, hourly fo
 
 ## 🚀 Live Preview
 
-You can view the live version of the project [here](http://127.0.0.1:5500/index.html)
+You can view the live version of the project [here](https://myweather2025.netlify.app/)
 
 ## 🌟 Features
 
