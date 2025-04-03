@@ -2,41 +2,66 @@
 // _________________function for weather icons_________________
 
 function getWeatherIconNight(condition) {
-  if (condition.toLowerCase().includes("mist")) {
+  if (condition.toLowerCase().includes("clear")) {
+    return "wi wi-night-clear"
+  }
+  else if (condition.toLowerCase().includes("mist") || condition.toLowerCase().includes("fog")){
     return "wi wi-night-fog"
   }
   else if (condition.toLowerCase().includes("thunder")) {
     return "wi wi-night-alt-thunderstorm"
   }
-  else if (condition.toLowerCase().includes("cloud")) {
+  else if  (condition.toLowerCase().includes("cloud")|| condition.toLowerCase().includes("overcast")) {
     return "wi wi-night-alt-cloudy"
   }
   else if (condition.toLowerCase().includes("rain")) {
     return "wi wi-night-alt-rain"
   }
-
-  else {
-    return "wi wi-night-clear"
+  else if (condition.toLowerCase().includes("sleet")) {
+    return "wi wi-night-alt-sleet"
+  }
+  else if (condition.toLowerCase().includes("snow")|| condition.toLowerCase().includes("ice")){
+    return "wi wi-night-alt-snow"
+  }
+else if (condition.toLowerCase().includes("drizzle")) {
+    return "wi-night-alt-sprinkle"
+  }
+else if (condition.toLowerCase().includes("blizzard")) {
+    return "wi-night-alt-snow-thunderstorm"
   }
 }
 function getWeatherIconDay(condition) {
-  if (condition.toLowerCase().includes("mist")) {
-    return "wi wi-day-fog"
-  }
-  else if (condition.toLowerCase().includes("thunder")) {
-    return "wi wi-day-alt-thunderstorm"
-  }
-  else if (condition.toLowerCase().includes("cloud")) {
-    return "wi wi-day-cloudy"
-  }
-  else if (condition.toLowerCase().includes("rain")) {
-    return "wi wi-day-rain"
-  }
 
-  else {
-    return "wi wi-day-sunny"
+  if (condition.toLowerCase().includes("sunny")) {
+      return "wi wi-day-sunny"
+    }
+    else if (condition.toLowerCase().includes("snow")|| condition.toLowerCase().includes("ice")) {
+      return "wi wi-day-snow"
+    }
+    else if (condition.toLowerCase().includes("mist") || condition.toLowerCase().includes("fog")) {
+      return "wi wi-day-fog"
+    }
+    else if (condition.toLowerCase().includes("thunder")) {
+      return "wi wi-day-alt-thunderstorm"
+    }
+    else if (condition.toLowerCase().includes("cloud")|| condition.toLowerCase().includes("overcast")) {
+      return "wi wi-day-cloudy"
+    }
+    else if (condition.toLowerCase().includes("rain")) {
+      return "wi wi-day-rain"
+    }
+    else if (condition.toLowerCase().includes("sleet")) {
+      return "wi wi-day-sleet"
+    }
+  else if (condition.toLowerCase().includes("drizzle")) {
+      return "wi wi-day-sprinkle"
+    }
+  else if (condition.toLowerCase().includes("blizzard")) {
+      return "wi-day-snow-thunderstorm"
+    }
+  
+  
   }
-}
 
 
 
@@ -281,7 +306,7 @@ function success(position) {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
   getWeather(lat, lon);
-  // console.log(lat, lon);
+  console.log(lat, lon);
   
 }
 
