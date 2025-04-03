@@ -59,7 +59,7 @@ const getWeather = async (city) => {
   try {
     // _______________updating weather info_______________
 
-    city_name.innerText = result.location.name + " , " + result.location.region + " , " + result.location.country;
+    city_name.innerText = `${result.location.name}, ${result.location.region?result.location.region + ",":""}  ${result.location.country}`
     document.getElementById("temp").firstElementChild.innerText = result.current.temp_c;
     curr_condition.innerText = result.current.condition.text;
     feels.firstElementChild.innerText = result.current.feelslike_c;
