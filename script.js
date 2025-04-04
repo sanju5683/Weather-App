@@ -32,7 +32,7 @@ else if (condition.toLowerCase().includes("blizzard")) {
 }
 function getWeatherIconDay(condition) {
 
-  if (condition.toLowerCase().includes("sunny")) {
+  if  (condition.toLowerCase().includes("sunny") ||condition.toLowerCase().includes("clear")){
       return "wi wi-day-sunny"
     }
     else if (condition.toLowerCase().includes("snow")|| condition.toLowerCase().includes("ice")) {
@@ -78,7 +78,7 @@ const getWeather = async (city) => {
 
 
 
-  console.log(result);
+  // console.log(result);
 
 
   try {
@@ -302,20 +302,40 @@ const getWeather = async (city) => {
 }
 
 
+
+let defaultCity = "New York"; // Set your default city here
+getWeather(defaultCity);
+
 function success(position) {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
+
+  // Fetch the weather using the user's location
   getWeather(lat, lon);
 }
+
 function error() {
-  console.log("Unable to retrieve location");
+ alert("Location is denied");
+
+  // Use a default city when location is denied
+  // let defaultCity = "New York"; // Set your default city here
+  // getWeather(defaultCity);
 }
-window.navigator.geolocation.getCurrentPosition(success,error);
+
+// Check if geolocation is available and request the user's location
 
 
-
-// getWeather("kOLkata")
-
+document.getElementById("location").addEventListener("click",()=>{
+  if (navigator.geolocation) {
+    window.navigator.geolocation.getCurrentPosition(success, error);
+  } else {
+    alert("Geolocation is not supported by this browser.");
+    // Use default city if geolocation is not available
+    // let defaultCity = "New York"; // Set your default city here
+    // getWeather(defaultCity);
+  }
+  
+})
 
 
 search.addEventListener("click", (e) => {
