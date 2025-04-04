@@ -306,16 +306,14 @@ function success(position) {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
   getWeather(lat, lon);
-  console.log(lat, lon);
-  
 }
-
-window.navigator.geolocation.getCurrentPosition(success,error);
-
-
 function error() {
   console.log("Unable to retrieve location");
 }
+window.navigator.geolocation.getCurrentPosition(success,error);
+
+
+
 // getWeather("kOLkata")
 
 
