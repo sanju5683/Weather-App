@@ -57,6 +57,7 @@ Weather App/
 
 - **WeatherAPI**: [WeatherAPI.com](https://www.weatherapi.com/) for providing weather data.
 - **Weather Icons**: [Weather Icons](https://erikflowers.github.io/weather-icons/) for the weather-related icons.
+- **Other Icons**: [ Icons](https://fontawesome.com/) 
 
 ## 📜 License
 
