@@ -90,9 +90,7 @@ button {
   text-align: center;
   margin: 10px 10px;
 }
-#feels {
-  /* font-size: 15px; */
-}
+
 #curr_condition {
   font-size: 20px;
 }
@@ -157,7 +155,7 @@ button {
 
 .daily-info .card {
   padding: 10px;
-  min-width: 90px;
+  min-width: 100px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -326,7 +324,7 @@ footer {
 .condition {
   font-size: 14px;
   margin-bottom: 10px;
-  font-weight: 200;
+  font-weight: 300;
 }
 .daily-info i {
   font-size: 20px;
