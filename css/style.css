@@ -2,20 +2,21 @@
 * {
   margin: 0;
   padding: 0;
-  color: rgba(255, 255, 255, 0.918);
+  color: rgb(255, 255, 255);
   font-weight: 200;
 
   font-family: "Poppins", sans-serif;
 }
 body {
-  background-color: rgb(8, 31, 82);
+  background-color:rgb(0 57 124);
 }
+
 .logo {
   padding: 0 10px;
-  font-weight: 400;
   display: flex;
   align-items: center;
   gap: 10px;
+  span{font-weight: 400;}
 }
 
 .img img {
@@ -33,33 +34,52 @@ nav {
   justify-content: space-between;
   padding: 2px 2px;
   font-size: 20px;
-  background-color: rgb(23, 57, 109);
-  height: 40px;
+  background-color: rgb(6, 30, 97);
+  height: 45px;
 }
 #search_area {
-  background-color: rgb(10, 27, 82);
+  background-color:rgb(2, 21, 70);
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  gap: 10px;
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+  }
 }
 button {
   cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: 5px 5px;
+  /* height: 30px;
+  background-color: rgb(255, 0, 0);
+  color: rgb(255, 255, 255);
+  font-size: 15px; */
 }
-nav input,
-button {
+nav input {
   height: 30px;
   /* background-color: rgb(133, 123, 123); */
   background-color: transparent;
   color: rgb(255, 255, 255);
   outline: none;
-  padding: 5px 15px;
+  padding: 5px 10px;
   border: none;
   font-size: 15px;
+  font-weight: 300;
+
 }
 
 /* -------------------current weather info------------------- */
 
 .weather-info {
-  margin-top: 50px;
+  margin-top: 25px;
   /* height: 30%; */
   display: flex;
   align-items: center;
@@ -162,12 +182,14 @@ button {
   font-size: 18px;
   user-select: none;
   gap: 4px;
+ 
 }
 .daily-info .card {
-  background-color: rgb(5, 23, 61);
+  /* background-color:rgb(1 172 215 / 86%); */
+
 }
 .daily-info .card:hover {
-  outline: 1px solid;
+  outline: 1px solid rgb(255, 255, 255);
 }
 
 .daily-info {
@@ -182,17 +204,20 @@ button {
 /* -------------------3 days Forecast------------------- */
 
 .forecast {
-  border: 1px solid rgba(255, 255, 255, 0.363);
-  border-radius: 10px;
+
   padding: 25px;
-  background-color: rgb(3 22 60 / 59%);
+  /* background-color:rgb(1 172 215 / 86%); */
   margin-top: 15px;
-  min-height: 100px;
+  min-height: 100px;  border-radius: 10px;
+}
+.forecast:hover{
+  outline: 1px solid rgb(255, 255, 255);
+
 }
 .forecast .day {
   cursor: pointer;
-  height: 70px;
-
+  height: 50px;
+font-weight: 900;
   /* width: 75vw; */
   margin: auto;
   display: flex;
@@ -426,8 +451,8 @@ footer {
   height: 100%;
   background: conic-gradient(
     var(--primary) calc(var(--percentage) * 1%),
-    var(--secondary) 0
-  );
+    rgb(8 65 137) 0);
+  
   mask: radial-gradient(white 55%, transparent 0);
   mask-mode: alpha;
   -webkit-mask: radial-gradient(#0000 62%, #000 0);
@@ -601,28 +626,27 @@ footer {
   }
   #temp :first-child {
     font-size: 3rem;
-}
+  }
 
-#temp :nth-child(2) {
-  font-size: 30px;
-  height: 60px;
-  display: inline-block;
-  margin: auto;
-}
-#temp :nth-child(3) {
-  font-size: 50px;
-  /* height: 88px; */
-  /* display: inline-block; */
-  margin: 0;
+  #temp :nth-child(2) {
+    font-size: 30px;
+    height: 60px;
+    display: inline-block;
+    margin: auto;
+  }
+  #temp :nth-child(3) {
+    font-size: 50px;
+    /* height: 88px; */
+    /* display: inline-block; */
+    margin: 0;
+  }
+  #temp {
+    align-items: center;
+  }
 
-}
-#temp {
-align-items: center;
-}
-
-.weather-info i {
+  .weather-info i {
     font-size: 3rem;
-}
+  }
 }
 
 @media (max-width: 425px) {
@@ -636,7 +660,11 @@ align-items: center;
   .forecast-info {
     width: 95vw;
   }
+  button {
 
+    padding: 0;
+
+  }
 }
 @media (max-width: 1024px) {
   .details .cards {
@@ -644,5 +672,9 @@ align-items: center;
   .details .card {
     /* display: flex;  */
     width: 90%;
+  }
+}
+@media (max-width: 325px) {
+  .logo span{ display: none;
   }
 }
