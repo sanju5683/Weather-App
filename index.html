@@ -5,11 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>My Weather APP</title>
 
-    <link
-      rel="shortcut icon"
-      href="/images/clouds-and-sun.png"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="/images/clouds-and-sun.png"
+    type="image/x-rgb(0, 162, 255)" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/weather-icons.css" />
     <link rel="stylesheet" href="./css/weather-icons.min.css" />
@@ -17,10 +14,17 @@
   </head>
   <body>
     <nav>
-      <div class="logo">My Weather <img width="25" src="./images/clouds-and-sun.png" alt=""></div>
+      <div class="logo">
+        My Weather <img width="25" src="./images/clouds-and-sun.png" alt="" />
+      </div>
       <div id="search_area">
         <input id="city-input" type="text" placeholder="Search" />
-        <button id="search"><img src="./images/search.svg" alt="" /></button>
+        <div>
+          <button id="location">
+            <img src="./images/location-dot-solid.svg" alt="" />
+          </button>
+          <button id="search"><img src="./images/search.svg" alt="" /></button>
+        </div>
       </div>
     </nav>
 
@@ -34,7 +38,7 @@
               <span>0</span>
               <!-- <i class="wi wi-celsius"></i> -->
               <span>&deg</span><span>C</span>
-              
+
               <!-- <span>&degC</span> -->
             </div>
           </div>
@@ -52,17 +56,12 @@
 
       <div class="daily-info">
         <div>Hourly Forecast</div>
-        <div class="hourly-info cards">
-    
-        </div>
+        <div class="hourly-info cards"></div>
       </div>
-<div class="forecast-info">
-  <div class="forecast-heading">3-Day Forecast</div>
-      <div class="forecast">
-      
-     
+      <div class="forecast-info">
+        <div class="forecast-heading">3-Day Forecast</div>
+        <div class="forecast"></div>
       </div>
-    </div>
       <div class="details">
         <div>Day Details</div>
         <div class="cards">
@@ -87,7 +86,8 @@
               <div class="rise">
                 <div class="heading">Moonrise</div>
                 <div class="rise_set-icon moon_rise">
-                  <span><i class="wi wi-moonrise"></i> </span><span>00:00 </span>
+                  <span><i class="wi wi-moonrise"></i> </span
+                  ><span>00:00 </span>
                 </div>
               </div>
 
@@ -110,7 +110,7 @@
           </div>
         </div>
       </div>
-    
+
       <div class="other-info">
         <div class="circle wind">
           <p class="heading">Wind</p>
