@@ -185,7 +185,7 @@ nav input {
  
 }
 .daily-info .card {
-  /* background-color:rgb(1 172 215 / 86%); */
+  background-color:rgb(1, 51, 107);;
 
 }
 .daily-info .card:hover {
@@ -206,7 +206,7 @@ nav input {
 .forecast {
 
   padding: 25px;
-  /* background-color:rgb(1 172 215 / 86%); */
+  background-color:rgb(1, 51, 107);
   margin-top: 15px;
   min-height: 100px;  border-radius: 10px;
 }
@@ -254,6 +254,9 @@ font-weight: 900;
   font-size: 2rem;
 
   margin-left: 10px;
+}
+.min_max{
+  width: 100px;
 }
 /* ---------------------Day details--------------------- */
 
@@ -428,7 +431,7 @@ footer {
 [role="progressbar"] {
   --percentage: var(--value);
   --primary: rgb(23, 209, 255);
-  --secondary: rgb(43, 72, 92);
+  --secondary: rgb(0, 81, 134);
   --size: 100px;
   animation: progress 2s 0.5s forwards;
   width: var(--size);
@@ -451,7 +454,7 @@ footer {
   height: 100%;
   background: conic-gradient(
     var(--primary) calc(var(--percentage) * 1%),
-    rgb(8 65 137) 0);
+    var(--secondary) 0);
   
   mask: radial-gradient(white 55%, transparent 0);
   mask-mode: alpha;
@@ -620,6 +623,9 @@ footer {
   }
   .day .img div {
     display: none;
+  }
+  .day .img{
+    width: 30px;
   }
   #city_name {
     font-size: 1.5rem;
