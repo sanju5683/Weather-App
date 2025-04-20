@@ -8,7 +8,7 @@
   font-family: "Poppins", sans-serif;
 }
 body {
-  background-color:rgb(0 57 124);
+  background-color: #00a8e8;
 }
 
 .logo {
@@ -30,15 +30,15 @@ nav {
   position: sticky;
   top: 0;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: space-between;
   padding: 2px 2px;
   font-size: 20px;
-  background-color: rgb(6, 30, 97);
+  background-color: #023047;
   height: 45px;
 }
 #search_area {
-  background-color:rgb(20, 41, 94);
+  background-color:#0b222e;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -185,7 +185,7 @@ nav input {
  
 }
 .daily-info .card {
-  background-color:rgb(1, 51, 107);;
+  background-color:#0077b6;
 
 }
 .daily-info .card:hover {
@@ -206,7 +206,7 @@ nav input {
 .forecast {
 
   padding: 25px;
-  background-color:rgb(1, 51, 107);
+  background-color:#0077b6;
   margin-top: 15px;
   min-height: 100px;  border-radius: 10px;
 }
@@ -430,8 +430,8 @@ footer {
 
 [role="progressbar"] {
   --percentage: var(--value);
-  --primary: rgb(23, 209, 255);
-  --secondary: rgb(0, 81, 134);
+  --primary: #004e98;
+  --secondary: #257bb441;
   --size: 100px;
   animation: progress 2s 0.5s forwards;
   width: var(--size);
@@ -476,8 +476,8 @@ footer {
   width: 100px;
   height: 100px;
   border-radius: 100%;
-  box-shadow: 0 0 10px rgba(24, 23, 23, 0.85);
-  border: 5px solid rgb(0, 204, 255);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.85);
+  border: 5px solid #004e98;
   position: relative;
   font-family: "Dosis";
   color: #ffffff;
