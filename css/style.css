@@ -131,6 +131,9 @@ nav input {
   /* gap: 10px; */
   display: flex;
 }
+#temp span{
+  font-weight: 300;
+}
 #temp :nth-child(2) {
   font-size: 40px;
   height: 88px;
@@ -155,7 +158,9 @@ nav input {
   justify-content: center;
   row-gap: 5px;
 }
-
+#other span{
+  font-weight: 300;
+}
 /* -----------------Hourly info----------------- */
 
 .daily-info .cards {
@@ -256,7 +261,7 @@ font-weight: 900;
   margin-left: 10px;
 }
 .min_max{
-  width: 100px;
+  width: 120px;
 }
 /* ---------------------Day details--------------------- */
 
