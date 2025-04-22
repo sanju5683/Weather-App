@@ -78,7 +78,7 @@ const getWeather = async (city) => {
 
 
 
-  // console.log(result);
+  console.log(result);
 
 
   try {
@@ -302,27 +302,39 @@ const getWeather = async (city) => {
 }
 
 
+if (navigator.geolocation) {
+  window.navigator.geolocation.getCurrentPosition(success, error);
+} else {
+  alert("Geolocation is not supported by this browser.");
+  // Use default city if geolocation is not available
+  // let defaultCity = "New York"; // Set your default city here
+  // getWeather(defaultCity);
+}
 
-let defaultCity = "New York"; // Set your default city here
-getWeather(defaultCity);
 
 function success(position) {
+
+
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
 
+
   // Fetch the weather using the user's location
-  getWeather(lat, lon);
+  getWeather(`${lat}, ${lon}`);
+  
 }
 
 function error() {
  alert("Location is denied");
 
   // Use a default city when location is denied
-  // let defaultCity = "New York"; // Set your default city here
-  // getWeather(defaultCity);
+  let defaultCity = "New York"; // Set your default city here
+  getWeather(defaultCity);
 }
 
 // Check if geolocation is available and request the user's location
+
+
 
 
 document.getElementById("location").addEventListener("click",()=>{
